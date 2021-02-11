@@ -9,5 +9,7 @@ namespace Test_Evaluacion.Web.Interfaces
         void AddProduct(Product product);
         void DeleteProduct(int id);
         void UpdateProduct(Product product);
+
+        Product SelectProduct(int? id);
     }
 }

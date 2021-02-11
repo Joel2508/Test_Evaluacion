@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using Test_Evaluacion.Common.Entities;
@@ -31,6 +32,11 @@ namespace Test_Evaluacion.Web.Interfaces
         public List<Product> GetProducts()
         {
             return dataContext.Products.OrderBy(p => p.Name).ToList();
+        }
+
+        public Product SelectProduct(int? id)
+        {
+            return dataContext.Products.FirstOrDefault(p => p.Id == Convert.ToInt32(id));
         }
 
         public void UpdateProduct(Product product)

@@ -11,6 +11,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Test_Evaluacion.Web.Data;
+using Test_Evaluacion.Web.Interfaces;
 
 namespace Test_Evaluacion.Web
 {
@@ -37,6 +38,7 @@ namespace Test_Evaluacion.Web
             {
                 cfg.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionLocal"));
             });
+            services.AddScoped<IProduct, Products>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
