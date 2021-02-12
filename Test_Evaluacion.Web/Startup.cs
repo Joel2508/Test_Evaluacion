@@ -39,6 +39,9 @@ namespace Test_Evaluacion.Web
                 cfg.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionLocal"));
             });
             services.AddScoped<IProduct, Products>();
+            services.AddScoped<IInvoice, Invoices>();
+            services.AddScoped<ICombo, Combo>();
+            services.AddScoped<IConverte, Converte>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 

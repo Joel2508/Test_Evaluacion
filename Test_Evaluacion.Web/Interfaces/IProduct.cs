@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Test_Evaluacion.Common.Entities;
+using Test_Evaluacion.Web.Data.Entities;
 
 namespace Test_Evaluacion.Web.Interfaces
 {

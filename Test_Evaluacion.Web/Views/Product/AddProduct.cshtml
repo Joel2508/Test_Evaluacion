@@ -1,10 +1,10 @@
-﻿@model Test_Evaluacion.Common.Entities.Product
+﻿@model Test_Evaluacion.Web.Data.Entities.Product
 
 @{
     ViewData["Title"] = "AddProduct";
 }
 
-<h2>AddProduct</h2>
+<h2>Add Product</h2>
 
 <h4>Product</h4>
 <hr />
@@ -18,15 +18,13 @@
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit" value="Create" class="btn btn-primary" />
+                <a asp-action="Index" class="glyphicon glyphicon-arrow-left btn btn-success" ></a>
             </div>
         </form>
     </div>
 </div>
 
-<div>
-    <a asp-action="Index">Back to List</a>
-</div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

@@ -2,8 +2,8 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using Test_Evaluacion.Common.Entities;
 using Test_Evaluacion.Web.Data;
+using Test_Evaluacion.Web.Data.Entities;
 
 namespace Test_Evaluacion.Web.Interfaces
 {
@@ -36,7 +36,7 @@ namespace Test_Evaluacion.Web.Interfaces
 
         public Product SelectProduct(int? id)
         {
-            return dataContext.Products.FirstOrDefault(p => p.Id == Convert.ToInt32(id));
+            return dataContext.Products.FirstOrDefault(p => p.ProductId == Convert.ToInt32(id));
         }
 
         public void UpdateProduct(Product product)

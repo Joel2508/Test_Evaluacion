@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Test_Evaluacion.Common.Entities;
+﻿using Microsoft.AspNetCore.Mvc;
+using Test_Evaluacion.Web.Data.Entities;
 using Test_Evaluacion.Web.Interfaces;
 
 namespace Test_Evaluacion.Web.Controllers
@@ -34,7 +30,7 @@ namespace Test_Evaluacion.Web.Controllers
             {
                 product.AddProduct(model);
                 return RedirectToAction(nameof(Index));
-            }            
+            }
             return View();
         }
 

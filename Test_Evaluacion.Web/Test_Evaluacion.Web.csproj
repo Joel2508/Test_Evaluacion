@@ -21,8 +21,4 @@
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.1.10" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Test_Evaluacion.Common\Test_Evaluacion.Common.csproj" />
-  </ItemGroup>
-
 </Project>
